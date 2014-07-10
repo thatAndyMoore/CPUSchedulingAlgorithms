@@ -163,18 +163,28 @@ int comparePriority(Process *elem1, Process *elem2){
 	else return 0;
 }
 
+/*
+ * Function to assist qsort in sorting procArray by burst time
+ * Called in shortestJobFirst() function
+ */
 int compareBurst(Process *elem1, Process *elem2){
 	if(elem1->cpuBurstDur < elem2->cpuBurstDur) return -1;
 	else if (elem1->cpuBurstDur > elem2->cpuBurstDur) return 1;
 	else return 0;
 }
 
+/*
+ * Function to assist qsort in sorting procArray by arival time
+ * Called in firstComeFirstServe() function
+ */
 int compareArrival(Process *elem1, Process *elem2){
 	if(elem1->arrivalTime < elem2->arrivalTime) return -1;
 	else if (elem1->arrivalTime > elem2->arrivalTime) return 1;
 	else return 0;
 }
-
+/*
+ * Returns the average waiting time of all of the processes
+ */
 float calculateAvgWaitTime(){
 	int timeOffset=0;
 	float avgWaitTime = 0;
@@ -192,6 +202,9 @@ float calculateAvgWaitTime(){
 	
 }
 
+/*
+ * 
+ */
 int calculateTimeLastProcFinished(){
 	int timeLastFinished = 0;
 	
