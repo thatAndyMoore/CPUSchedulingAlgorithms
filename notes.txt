@@ -1,0 +1,9 @@
+turnaround time = TotalBurst - ArivalTime[i] ?
+
+Struct
+- ID
+- pri
+- arrival
+- burst
+- wait(initial wait) // for rr Total - Arrival
+- how much waiting (how long was it running) // for rr
