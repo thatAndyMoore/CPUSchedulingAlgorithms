@@ -153,6 +153,8 @@ void prioritySch(){
 	
 }
 
+
+
 /*
  * Function to assist qsort in sorting struct array by element priority
  * Called in the prioritySch() function
